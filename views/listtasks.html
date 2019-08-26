@@ -1,0 +1,41 @@
+<html>
+<head>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+                    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+        <h3>
+                <a href = "index.html"> Home</a>
+                <a href="newtask.html"> Add new task</a>
+            </h3>
+    </br>
+    <table>
+        <tr>
+            <td>Task</td>
+            <td>Due Date</td>
+            <td>Task Description</td>
+        </tr>
+        <% for (var i = 0; i < db.length; i++) { %>
+            <tr>
+                <td>
+                    <%= db[i].task %>
+                </td>
+                <td>
+                    <%= db[i].date %>
+                </td>
+                <td>
+                    <%= db[i].desc %>
+                </td>
+            </tr>
+            <% }%>
+</body>
+
+</html>
